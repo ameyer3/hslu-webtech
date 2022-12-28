@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Hotel Green - Reviews</title>
+</head>
+
+<body>
+    <!--Navigation-->
+    <header class="w3-container w3-light-green">
+        <h1>Hotel Green</h1>
+        <h3>Reviews</h3>
+        <nav class=" w3-bar w3-light-green">
+            <a href="#information" class=" w3-bar-item w3-button w3-mobile ">Information</a>
+            <a href="#review" class=" w3-bar-item w3-button w3-mobile ">Write a review</a>
+        </nav>
+    </header>
+    <main>
+        <section id="#information">
+            <h1>Hotel Green</h1>
+            <p>Our Hotel is in the best location imaginable, right next to the ocean.</p>
+            <img src="./img/hotel.jpg" alt="Hotel with pool next to the ocean" width="80%" />
+            <p>Please leave us your thoughts. Did you enjoy your stay? Would like like to tell us something? Use the
+                form
+                below to enter your thoughts into our virtual review system.</p>
+        </section>
+        <section id="review">
+            <form action="response.php" method="POST">
+                <h2>Review</h2>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">Content</label>
+                <input type="text" id="content" name="content" placeholder="Enter your thoughts..." required>
+                <label for="room">What kind of room did you stay in?</label>
+                <select name="room" required>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="room with sea view">Room with sea view</option>
+                    <option value="room with pool view">Room with pool view</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <label for="recommend">Would you recommmend us?</label>
+                <label for="recommend-yes">Yes</label>
+                <input type="radio" name="recommend" id="recommend-yes" value="yes" required>
+                <label for="recommend-no">No</label>
+                <input type="radio" name="recommend" id="recommend-no" value="no" required>
+                <button type="submit">Submit review</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
