@@ -11,4 +11,4 @@ create table reviews (
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`);
 ALTER TABLE `reviews`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
