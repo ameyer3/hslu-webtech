@@ -11,47 +11,73 @@
 </head>
 
 <body>
-    <!--Navigation-->
-    <header class="w3-container w3-light-green">
-        <h1>Hotel Green</h1>
-        <h3>Reviews</h3>
+    <header class="w3-container w3-light-green w3-center">
+        <h1>Review Hotel Green</h1>
         <nav class=" w3-bar w3-light-green">
             <a href="#information" class=" w3-bar-item w3-button w3-mobile ">Information</a>
             <a href="#review" class=" w3-bar-item w3-button w3-mobile ">Write a review</a>
         </nav>
     </header>
-    <main>
-        <section id="#information">
-            <h1>Hotel Green</h1>
+    <main class="w3-container w3-sand w3-center">
+        <article id="#information">
+            <h1>Your Stay in Hotel Green</h1>
             <p>Our Hotel is in the best location imaginable, right next to the ocean.</p>
-            <img src="./img/hotel.jpg" alt="Hotel with pool next to the ocean" width="80%" />
             <p>Please leave us your thoughts. Did you enjoy your stay? Would like like to tell us something? Use the
                 form
                 below to enter your thoughts into our virtual review system.</p>
-        </section>
-        <section id="review">
-            <form action="response.php" method="POST">
+
+            <section class="container">
+                <img src="./img/beach.jpg" alt="Beach with birds" />
+                <img src="./img/hotel.jpg" alt="Hotel with pool next to the ocean" />
+                <img src="./img/ocean.jpg" alt="Close up of waves" />
+            </section>
+
+
+
+        </article>
+        <!--TODO Doesnt work anymore-->
+        <article id="#review" class="w3-conatiner w3-padding">
+            <form action="response.php" method="POST" class="w3-container w3-padding">
                 <h2>Review</h2>
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title" required>
-                <label for="content">Content</label>
-                <input type="text" id="content" name="content" placeholder="Enter your thoughts..." required>
-                <label for="room">What kind of room did you stay in?</label>
-                <select name="room" required>
-                    <option value="" disabled selected>Select your option</option>
-                    <option value="room with sea view">Room with sea view</option>
-                    <option value="room with pool view">Room with pool view</option>
-                    <option value="suite">Suite</option>
-                </select>
-                <label for="recommend">Would you recommmend us?</label>
-                <label for="recommend-yes">Yes</label>
-                <input type="radio" name="recommend" id="recommend-yes" value="yes" required>
-                <label for="recommend-no">No</label>
-                <input type="radio" name="recommend" id="recommend-no" value="no" required>
-                <button type="submit">Submit review</button>
+                <section>
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" class="w3-input w3-border w3-round" required>
+                </section>
+                <section>
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content" placeholder="Enter your thoughts..."
+                        class="w3-input w3-border w3-round" required></textarea>
+                </section>
+                <section>
+                    <label for="room">What kind of room did you stay in?</label>
+                    <select name="room" class="w3-select" required>
+                        <option value="" disabled selected>Select your room</option>
+                        <option value="room with sea view">Room with sea view</option>
+                        <option value="room with pool view">Room with pool view</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </section>
+                <section id="radio-buttons">
+                    <label for="recommend">Will you recommmend us?</label><br>
+                    <label for="recommend-yes">Yes</label>
+                    <input type="radio" name="recommend" id="recommend-yes" value="yes" class="w3-radio" required>
+                    <label for="recommend-no">No</label>
+                    <input type="radio" name="recommend" id="recommend-no" value="no" class="w3-radio" required>
+                    <br>
+
+                </section>
+
+                <button type="submit" class="w3-btn w3-light-green">Submit review</button>
             </form>
-        </section>
+
+
+        </article>
     </main>
+    <footer class="w3-container w3-light-green w3-center">
+        <p>copyright</p>
+    </footer>
 </body>
+<!--TOOD: can this pls be nicer?-->
+<script src="./js/canva.js"></script>
 
 </html>
