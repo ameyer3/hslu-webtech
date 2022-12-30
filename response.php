@@ -32,7 +32,7 @@ if (!isset($_COOKIE['block'])) {
 
         $query = "INSERT INTO reviews (title, content, room, recommend, creation_date) values ( ? , ? , ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $query);
-        $creation_date = date('d-m-Y');
+        $creation_date = date('Y-m-d');
         $recommend_bit = $_POST['recommend'] == "yes" ? 1 : 0;
         mysqli_stmt_bind_param($stmt, 'sssis', $_POST['title'], $_POST['content'], $_POST['room'], $recommend_bit, $creation_date);
         $res = mysqli_stmt_execute($stmt);
@@ -51,8 +51,7 @@ echo "<p>To get back to the homepage, click <a href='./index.html'>here</a></p>"
 
 echo "<h2>Have a look at other people's reviews!</h2>";
 $stmt = mysqli_prepare($conn, "SELECT title, content, room, recommend, creation_date FROM reviews WHERE creation_date > ?");
-// TODO this does not work with the date
-$date_two_moths_ago = date('d-m-Y', strtotime('-2 months'));
+$date_two_moths_ago = date('Y-m-d', strtotime("-2 month"));
 mysqli_stmt_bind_param($stmt, "s", $date_two_moths_ago);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/custom.css">
+    <script src="./js/canvas.js"></script>
     <title>Hotel Green - Reviews</title>
 </head>
 
@@ -19,7 +20,7 @@
         </nav>
     </header>
     <main class="w3-container w3-sand w3-center">
-        <article id="#information">
+        <article id="information">
             <h1>Your Stay in Hotel Green</h1>
             <p>Our Hotel is in the best location imaginable, right next to the ocean.</p>
             <p>Please leave us your thoughts. Did you enjoy your stay? Would like like to tell us something? Use the
@@ -36,7 +37,7 @@
 
         </article>
         <!--TODO Doesnt work anymore-->
-        <article id="#review" class="w3-conatiner w3-padding">
+        <article id="review" class="w3-conatiner w3-padding">
             <form action="response.php" method="POST" class="w3-container w3-padding">
                 <h2>Review</h2>
                 <section>
@@ -64,6 +65,8 @@
                     <label for="recommend-no">No</label>
                     <input type="radio" name="recommend" id="recommend-no" value="no" class="w3-radio" required>
                     <br>
+                    <canvas id="myCanvas" width="200" height="140">
+                        Your browser does not support the HTML5 canvas tag.</canvas>
 
                 </section>
 
@@ -74,10 +77,8 @@
         </article>
     </main>
     <footer class="w3-container w3-light-green w3-center">
-        <p>copyright</p>
+        <p>&c copyright</p>
     </footer>
 </body>
-<!--TOOD: can this pls be nicer?-->
-<script src="./js/canva.js"></script>
 
 </html>

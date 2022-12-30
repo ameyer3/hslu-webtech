@@ -6,7 +6,7 @@ create table reviews (
     content varchar(500) NOT NULL,
     room varchar(50) NOT NULL, 
     recommend bit(1) NOT NULL,
-    creation_date varchar(10) NOT NULL);
+    creation_date date NOT NULL);
 
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`);
