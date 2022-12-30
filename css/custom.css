@@ -5,20 +5,26 @@
     gap: 1%;
 }
 
+img {
+    object-fit: cover;
+    height: auto;
+}
+
+@media (min-width: 800px) {
+    img {
+        max-width: 30%;
+    }
+}
+
 @media (max-width: 800px) {
     .container {
         flex-direction: column;
     }
 
     img {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+        margin-top: 1em;
     }
-}
-
-img {
-    max-width: 30%;
-    height: auto;
 }
 
 canvas {
