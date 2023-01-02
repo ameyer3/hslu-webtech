@@ -28,11 +28,16 @@
             !isset($_POST['recommend'])
         ) {
             echo "<p class='w3-container w3-center'>Not all required parameters were set.</p>";
+        } elseif (
+            strlen($_POST['title']) > 100 ||
+            strlen($_POST['content']) > 500
+        ) {
+            echo "<p class='w3-container w3-center'>Not all required parameters were set correctly. Make sure your title is not longer than 100 charcters and the review itself should not be longer than 500 characters.</p>";
         } else {
             echo "<section>";
             echo "<p>Thank you for your review with the title '<i>" . $_POST['title'] . "'</i>.</p>";
             echo "<p>During your stay with us you stayed in a " . $_POST['room'] . " . We hope you loved it.</p<";
-            echo "<p>You told us the following about your stay: <br/><br/> <i>\"" . $_POST['content'] . "\"</i></p>";
+            echo "<p>You told us the following about your stay: <p> <i>\"" . $_POST['content'] . "\"</i></p></p>";
 
             echo "<p>When we asked you whether you would recommend us or not you said " . $_POST['recommend'] . ".<p>";
             if ($_POST['recommend'] == 'yes') {
