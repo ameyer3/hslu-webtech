@@ -13,7 +13,6 @@
 
 <body class="w3-sand">
     <?php
-    // TODO: check style everywhere and remove if not needed the classes from sections etc
     $conn = mysqli_connect("localhost", "phpmyadmin", "admin", "reviews");
     if (!$conn) {
         die("Database connection failed");
@@ -27,12 +26,12 @@
             !isset($_POST['room']) ||
             !isset($_POST['recommend'])
         ) {
-            echo "<p class='w3-container w3-center'>Not all required parameters were set.</p>";
+            echo "<p>Not all required parameters were set.</p>";
         } elseif (
             strlen($_POST['title']) > 100 ||
             strlen($_POST['content']) > 500
         ) {
-            echo "<p class='w3-container w3-center'>Not all required parameters were set correctly. Make sure your title is not longer than 100 charcters and the review itself should not be longer than 500 characters.</p>";
+            echo "<p>Not all required parameters were set correctly. Make sure your title is not longer than 100 charcters and the review itself should not be longer than 500 characters.</p>";
         } else {
             echo "<section>";
             echo "<p>Thank you for your review with the title '<i>" . $_POST['title'] . "'</i>.</p>";
@@ -64,9 +63,9 @@
         }
 
     } else {
-        echo "<p class='w3-container w3-center'>You submitted a review in the last 5 minutes, please wait some more time.</p>";
+        echo "<p>You submitted a review in the last 5 minutes, please wait some more time.</p>";
     }
-    echo "<p class='w3-container w3-center'> To get back to the homepage, click <a href='./index.html'>here</a></p>";
+    echo "<p> To get back to the homepage, click <a href='./index.html'>here</a></p>";
 
     echo "<section>";
     echo "<h1>Have a look at other people's reviews!</h1>";

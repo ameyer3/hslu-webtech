@@ -22,8 +22,9 @@
         </nav>
     </header>
     <main class="w3-container w3-sand w3-center">
+        <h1>Your Stay in Hotel Green</h1>
+
         <article id="information">
-            <h1>Your Stay in Hotel Green</h1>
             <p>Our Hotel is in the best location imaginable, right next to the ocean.</p>
             <p>Please leave us your thoughts. Did you enjoy your stay? Would like like to tell us something? Use the
                 form
@@ -52,7 +53,7 @@
                 </section>
                 <section>
                     <label for="room">What kind of room did you stay in?</label>
-                    <select name="room" class="w3-select" required>
+                    <select id="room" name="room" class="w3-select" required>
                         <option value="" disabled selected>Select your room</option>
                         <option value="room with sea view">Room with sea view</option>
                         <option value="room with pool view">Room with pool view</option>
@@ -61,7 +62,7 @@
                     <span class="error-message w3-text-red"></span>
                 </section>
                 <section id="radio-buttons">
-                    <label for="recommend">Will you recommmend us?</label>
+                    <label>Will you recommmend us?</label>
                     <div>
                         <label for="recommend-yes">Yes</label>
                         <input type="radio" name="recommend" id="recommend-yes" value="yes" class="w3-radio" required>
@@ -80,7 +81,7 @@
         </article>
     </main>
     <footer class="w3-container w3-light-green w3-center">
-        <p>&#169 Hotel Green, 2022</p>
+        <p>&#169; Hotel Green, 2022</p>
     </footer>
 </body>
 
