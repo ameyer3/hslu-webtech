@@ -37,7 +37,6 @@ document.getElementById("recommend-no").onclick = function () {
     ctx.fillText("Sorry!", 60, 150);
 }
 
-
 function colorPart(color) {
     ctx.fillStyle = color;
     ctx.fill();
@@ -50,7 +49,6 @@ function drawHead(color) {
     colorPart(color);
     ctx.stroke();
     ctx.lineWidth = 1;
-
 }
 
 function drawParts(startx, starty, size, color) {
