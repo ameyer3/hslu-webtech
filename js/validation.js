@@ -15,6 +15,7 @@ function validate(event) {
         for (let section of sections) {
             if (section.id.includes("radio-buttons")) {
                 let errorElement = section.querySelector("span.error-message");
+                errorElement.textContent = "";
                 if (!section.querySelector("input:checked")) {
                     errorElement.textContent = section.querySelector("input").validationMessage;
                 }
